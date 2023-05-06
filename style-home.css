@@ -3,6 +3,10 @@
      
 }
 
+td{
+    padding: 6px;
+}
+
 
 *{
     font-family: 'Montserrat', sans-serif;
@@ -17,6 +21,7 @@
     background-color: #E50914 !important;
     font-weight: 800 !important;
     color:black !important;
+    padding-right: 20px;
      
 }
 
@@ -34,6 +39,23 @@
     transform: scale(1.04);
     cursor: pointer;
 }
+.bg-img {
+    /* The image used */
+    background-image: url("./image/banner.jpg");
+  
+    /* Control the height of the image */
+    min-height: 550px;
+  
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-size: cover;
+    position: fixed;
+    top: 80px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+  }
 
 
 .btn-collection-playing{
@@ -41,3 +63,26 @@
     max-width: 110px;
     margin:  2em auto;
 }
+
+.formData {
+    padding-top: 0px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+    background-color: rgb(3, 3, 3);
+    height: 330x;
+    position:fixed;
+    left: 30px;
+    top: 72px;
+    bottom: 270px;
+
+    }
+    form {
+    font-size: 22px;
+    padding: 25px;
+    color: azure;
+    }
+    form input {
+        
+    margin-left: 10px;
+    font-size: 15px;
+    }
