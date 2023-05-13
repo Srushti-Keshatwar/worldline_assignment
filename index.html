@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Movie Seat Booking</title>
+  </head>
+<body>
+  <header>
+		<h1>Movie Ticket Booking Website</h1>
+		<nav>
+			<ul class="navbar">
+				<li><a href="#booking-page">Booking Page</a></li>
+				<li><a href="#now-showing-page">Now Showing Page</a></li>
+        <li><a href="#Signup">Signup</a></li>
+			</ul>
+		</nav>
+	</header>
+  <body><div>
+
+  
+    <div class="movie-container">
+      <label>Pick a movie:</label>
+      <select id="movie"> 
+        <option value="10">Ponniyin Selvan: II ($10)</option>
+        <option value="12">The Kerala Story ($12)</option>
+        <option value="8">Guardians of the Galaxy Vol. 3 ($8)</option>
+        <option value="9">Ved ($9)</option>
+      </select> <p>Next show starts at: <span id="show-time"></span></p>
+      <p>Time left until next show: <span id="countdown"></span></p>
+      
+
+
+    </div>
+
+    <ul class="showcase">
+      <li>
+        <div class="seat"></div>
+        <small>N/A</small>
+      </li>
+
+      <li>
+        <div class="seat selected"></div>
+        <small>Selected</small>
+      </li>
+
+      <li>
+        <div class="seat occupied"></div>
+        <small>Occupied</small>
+      </li>
+    </ul>
+
+    <div class="container">
+      <div class="screen"></div>
+      <div class="row">
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+      </div>
+      <div class="row">
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat occupied"></div>
+        <div class="seat occupied"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+      </div>
+
+      <div class="row">
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat occupied"></div>
+        <div class="seat occupied"></div>
+      </div>
+
+      <div class="row">
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+      </div>
+
+      <div class="row">
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat occupied"></div>
+        <div class="seat occupied"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+      </div>
+
+      <div class="row">
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat occupied"></div>
+        <div class="seat occupied"></div>
+        <div class="seat occupied"></div>
+        <div class="seat"></div>
+      </div>
+    </div>
+
+    <p class="text">
+      You have selected <span id="count">0</span> seats for a price of $<span id="total">0</span>
+    </p>
+    <button type="submit">Book Now</button>
+    <button id="reset-btn">Reset</button>
+
+    <section id="now-showing-page">
+			<h2>Now Showing Page</h2>
+      <div id="now-showing">
+        <h2>Now Showing</h2>
+        <div class="movie">
+          <img src="images/ps2.jpg" alt="Ponniyin Selvan: II">
+          <h2>Ponniyin Selvan: II</h2>
+          <p>Showing at:</p>
+          <ul>
+            <li>10:00 AM</li>
+            <li>2:00 PM</li>
+            <li>6:00 PM</li>
+          </ul>
+        </div>
+    <div class="movie">
+      <img src="images/tks.jpg" alt="The Kerala Story">
+      <h2>The Kerala Story</h2>
+      <p>Showing at:</p>
+      <ul>
+        <li>10:00 AM</li>
+        <li>2:00 PM</li>
+        <li>6:00 PM</li>
+      </ul>
+    </div>
+    
+    <div class="movie">
+      <img src="images/gfg.jpg" alt="Guardians of the Galaxy Vol. 3">
+      <h2>Guardians of the Galaxy Vol. 3</h2>
+      <p>Showing at:</p>
+      <ul>
+        <li>10:00 AM</li>
+        <li>2:00 PM</li>
+        <li>6:00 PM</li>
+      </ul>
+    </div>
+    
+    <div class="movie">
+      <img src="images/Ved.jpg" alt="Ved">
+      <h2>Ved</h2>
+      <p>Showing at:</p>
+      <ul>
+        <li>10:00 AM</li>
+        <li>2:00 PM</li>
+        <li>6:00 PM</li>
+      </ul>
+    </div>
+			<form>
+				<label for="search">Search for a movie:</label>
+				<input type="text" id="search" name="search">
+				<button type="submit">Search</button>
+			</form>
+			<form>
+				<label for="genre">Filter movies by genre:</label>
+				<select id="genre">
+					<option value="all">All</option>
+					<option value="action">Action</option>
+					<option value="comedy">Comedy</option>
+					<option value="drama">Drama</option>
+				</select>
+				<button type="submit">Filter</button>
+			</form>
+      
+			
+		</section>
+    <script src="script.js"></script>
+  </div>
+
+  <!-- Sign-up page -->
+<div id="Signup">
+  <h2>Sign Up</h2>
+  <form action="#" method="post">
+  <label for="reg_id">Registration ID*</label>
+  <input type="text" id="reg_id" name="reg_id" placeholder="Enter registration ID" pattern="[0-9A-Za-z]{8}" title="Registration ID should contain 8 alphanumeric characters" required>
+<br/>
+  <label for="username">Username*</label>
+  <input type="text" id="username" name="username" placeholder="Enter username" pattern="[A-Za-z]+" title="Username should not contain any digits" required>
+  <br/>
+  <label for="password">Password*</label>
+  <input type="password" id="password" name="password" placeholder="Enter password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*\W).{8,}" title="Password should contain at least one small case letter, one uppercase letter, one digit, one special character, and have a minimum length of 8" required>
+  <br/>
+  <label for="email">Email*</label>
+  <input type="email" id="email" name="email" placeholder="Enter email" required>
+  <br/>
+  <label for="mobile">Mobile Number*</label>
+  <input type="tel" id="mobile" name="mobile" placeholder="Enter mobile number" pattern="[0-9]{10}" title="Mobile number should contain exactly 10 digits" required>
+  <br/>
+  <label for="dob">Date of Birth*</label>
+  <input type="date" id="dob" name="dob" placeholder="DD/MM/YYYY" required>
+  <br/>
+  <button type="submit">Submit</button>
+  <button type="reset">Cancel</button>
+</form>
+
+</div>
+  </body>
+</html>
